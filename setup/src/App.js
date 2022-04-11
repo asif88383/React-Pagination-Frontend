@@ -8,10 +8,11 @@ function App() {
   const { loading, data } = useFetch()
 
   useEffect(() => {
-    if(loading){
-      return setFollowers(data[page])
+    if (loading) {
+      return 
     }
-  }, [loading, page])
+    setFollowers(data[page])
+  }, [loading, data, page])
 
   const nextPage = () => {
     setPage((oldPage) => {
